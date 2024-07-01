@@ -29,7 +29,7 @@ cat > ${WORKDIR}/config.json << EOF
 {
   "log": {
     "disabled": false,
-    "level": "warn",
+    "level": "info",
     "timestamp": true
   },
   "inbounds": [{
@@ -38,7 +38,7 @@ cat > ${WORKDIR}/config.json << EOF
       "sniff_override_destination": true,
       "tag": "hy2",
       "listen": "::",
-      "listen_port": "${HY2_PORT}",
+      "listen_port": ${HY2_PORT} ,
       "up_mbps": 300,
       "down_mbps": 300,
       "users": [{
