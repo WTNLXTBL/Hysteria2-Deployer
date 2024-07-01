@@ -11,7 +11,7 @@ echo "生成SSL证书中，一路回车即可"
 sleep 1
 rm -rf ${WORKDIR}/private.key ${WORKDIR}/csr.pem ${WORKDIR}/cert.crt
 openssl genpkey -algorithm RSA -out ${WORKDIR}/private.key
-openssl req -new -key ${WORKDIR}/private.key -out ${WORKDIR}/csr.pem -subj "/C=/ST=/L=/O=/OU=/CN=${DOMAIN}/emailAddress="
+openssl req -new -key ${WORKDIR}/private.key -out ${WORKDIR}/csr.pem -subj "/C=/ST=/L=/O=/OU=/CN=/emailAddress="
 openssl req -x509 -days 3650 -key ${WORKDIR}/private.key -in ${WORKDIR}/csr.pem -out ${WORKDIR}/cert.crt
 if [ $? == 0 ]; then
 echo "完成"
