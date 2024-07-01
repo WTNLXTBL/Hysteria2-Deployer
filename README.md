@@ -20,7 +20,7 @@
 #### 启动并获取配置
 
 在工作目录下执行
-```
+```bash
 chmod +x start.sh && bash start.sh
 ```
 即可启动
@@ -28,3 +28,13 @@ chmod +x start.sh && bash start.sh
 等待程序执行完成，会在 Terminal 中直接打印出 Hysteria2 的配置链接。
 
 ### 自动启动
+
+打开`crontab`编辑器：
+```bash
+crontab -e
+```
+添加以下条目：
+```plaintext
+@reboot ${HOME}/singbox-start/start.sh
+```
+完成上述步骤即可实现自动启动
