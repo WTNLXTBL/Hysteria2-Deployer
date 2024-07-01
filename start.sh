@@ -2,7 +2,7 @@
 HY2_PORT=''
 HY2_PASSWORD=''
 WORKDIR="${HOME}/singbox-start"
-
+IP=`curl -Ls https://ipinfo.io/ip`
 generate_config() {
   rm -rf ${WORKDIR}/config.json
   cat > ${WORKDIR}/config.json << EOF
