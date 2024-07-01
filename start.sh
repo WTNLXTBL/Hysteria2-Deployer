@@ -75,4 +75,4 @@ export_list
 
 [ ! -e ${WORKDIR}/config.json ] && generate_config
 
-nohup sing-box run -c ${WORKDIR}/config.json
+nohup sing-box run -c ${WORKDIR}/config.json &
