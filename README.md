@@ -10,7 +10,7 @@
 ### 部署
 
 #### 准备工作
-前提:你的服务器上必须首先安装好sing-box
+前提：你的服务器上必须先安装好sing-box
 
 克隆这个仓库并进入:
 ```bash
@@ -23,11 +23,6 @@ git clone https://github.com/WTNLXTBL/singbox-start && cx singbox-start
 |HY2_PORT|是|Hysteria2 协议监听端口|
 |IP|是|服务器IP地址|
 |HY2_PASSWORD|是|连接到 Hysteria2 代理时使用的密码|
-
-生成自签名SSL证书:
-```bash
-openssl genpkey -algorithm RSA -out private.key && openssl req -new -key private.key -out csr.pem && openssl req -x509 -days 3650 -key private.key -in csr.pem -out cert.crt
-```
 
 #### 启动并获取配置
 
