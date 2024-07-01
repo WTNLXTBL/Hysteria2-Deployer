@@ -1,8 +1,11 @@
 #!/bin/bash
+#以下三行是需要填写的变量
 HY2_PORT=''
 HY2_PASSWORD=''
+IP=''
+#此变量无需编辑
 WORKDIR="${HOME}/singbox-start"
-IP=`curl -Ls https://ipinfo.io/ip`
+
 generate_config() {
   rm -rf ${WORKDIR}/config.json
   cat > ${WORKDIR}/config.json << EOF
@@ -58,7 +61,7 @@ generate_config() {
 EOF
 }
 
-    export_list() {
+export_list() {
         rm -rf ${WORKDIR}/list
         cat > ${WORKDIR}/list << EOF
 ----------------------------
@@ -66,10 +69,10 @@ hy2配置：
 hysteria2://${HY2_PASSWORD}@${IP}:${HY2_PORT}/?insecure=1
 ----------------------------
 EOF
-  }
+}
 
 export_list
 
 [ ! -e ${WORKDIR}/config.json ] && generate_config
 
-sing-box run -c ${WORKDIR}/config.json
+nohup sing-box run -c ${WORKDIR}/config.json
