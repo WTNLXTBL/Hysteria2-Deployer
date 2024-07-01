@@ -71,8 +71,8 @@ hysteria2://${HY2_PASSWORD}@${IP}:${HY2_PORT}/?insecure=1
 EOF
 }
 
-export_list
-
 [ ! -e ${WORKDIR}/config.json ] && generate_config
+
+export_list && cat ${WORKDIR}/list
 
 nohup sing-box run -c ${WORKDIR}/config.json &
