@@ -1,7 +1,7 @@
 ## singbox-start
 
 ### 项目特点
-* 一键使用sing-box搭建hysteria2代理 ;
+* 一键使用sing-box搭建hysteria2代理
 
 ### TODO
 
