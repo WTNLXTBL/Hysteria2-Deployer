@@ -12,12 +12,21 @@
 #### 准备工作
 前提：你的服务器上必须先安装好sing-box
 
-克隆这个仓库并进入:
+下载一键启动脚本：
 ```bash
-git clone https://github.com/WTNLXTBL/singbox-start && cx singbox-start
+wget https://raw.githubusercontent.com/WTNLXTBL/singbox-start/main/start.sh
+```
+或
+```bash
+curl -L -o start.sh https://raw.githubusercontent.com/WTNLXTBL/singbox-start/main/start.sh
 ```
 
-修改环境变量：
+添加执行权限
+```bash
+chmod +x start.sh
+```
+
+修改`start.sh`中的环境变量：
 |变量名|是否必须|备注|
 |-|-|-|
 |HY2_PORT|是|Hysteria2 协议监听端口|
@@ -26,9 +35,9 @@ git clone https://github.com/WTNLXTBL/singbox-start && cx singbox-start
 
 #### 启动并获取配置
 
-在仓库目录下执行
+执行
 ```bash
-chmod +x start.sh && bash start.sh
+./start.sh
 ```
 即可启动
 
