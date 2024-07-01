@@ -4,7 +4,7 @@ HY2_PORT=''
 HY2_PASSWORD=''
 IP=''
 #此变量无需编辑
-WORKDIR="${HOME}/singbox-start"
+WORKDIR="${HOME}/Hysteria2-Deployer"
 
 generate_cert() {
 echo "生成SSL证书中，一路回车即可"

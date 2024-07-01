@@ -1,11 +1,11 @@
-## singbox-start
+## Hysteria2-Deployer
 
 ### 项目特点
-* 一键使用sing-box搭建hysteria2代理
+* 简单地使用sing-box搭建hysteria2代理
 
 ### TODO
 
-> 更方便使用
+> 更方便地使用
 
 ### 部署
 
@@ -14,11 +14,11 @@
 
 下载一键启动脚本：
 ```bash
-wget https://raw.githubusercontent.com/WTNLXTBL/singbox-start/main/start.sh
+wget https://raw.githubusercontent.com/WTNLXTBL/Hysteria2-Deployer/main/start.sh
 ```
 或
 ```bash
-curl -L -o start.sh https://raw.githubusercontent.com/WTNLXTBL/singbox-start/main/start.sh
+curl -L -o start.sh https://raw.githubusercontent.com/WTNLXTBL/Hysteria2-Deployer/main/start.sh
 ```
 
 添加执行权限
@@ -51,6 +51,6 @@ crontab -e
 ```
 添加以下条目：
 ```plaintext
-@reboot ${HOME}/singbox-start/start.sh
+@reboot ${HOME}/Hysteria2-Deployer/start.sh
 ```
 完成上述步骤即可实现自动启动
