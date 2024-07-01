@@ -29,18 +29,18 @@ cat > ${WORKDIR}/config.json << EOF
 {
   "log": {
     "disabled": false,
-    "level": "info",
+    "level": "warn",
     "timestamp": true
   },
   "inbounds": [{
       "type": "hysteria2",
       "sniff": true,
       "sniff_override_destination": true,
-      "tag": "hy2-sb",
+      "tag": "hy2",
       "listen": "::",
-      "listen_port": ${HY2_PORT},
-      "up_mbps": 900,
-      "down_mbps": 360,
+      "listen_port": "${HY2_PORT}",
+      "up_mbps": 300,
+      "down_mbps": 300,
       "users": [{
         "password": "${HY2_PASSWORD}"
       }],
