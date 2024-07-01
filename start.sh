@@ -1,8 +1,8 @@
 #!/bin/bash
 #以下三行是需要填写的变量
-HY2_PORT=''
-HY2_PASSWORD=''
-IP=''
+export HY2_PORT=''
+export HY2_PASSWORD=''
+export IP=''
 #此变量无需编辑
 WORKDIR="${HOME}/Hysteria2-Deployer"
 
@@ -95,6 +95,7 @@ EOF
 }
 
 main() {
+mkdir ${WORKDIR} 2>/dev/null
 generate_cert
 [ ! -e ${WORKDIR}/config.json ] && generate_config
 export_list && cat ${WORKDIR}/list
